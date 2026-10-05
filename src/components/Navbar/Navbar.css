@@ -1,0 +1,89 @@
+.navbarWrapper {
+  max-width: var(--max-width);
+  margin: 1.5rem auto 0 auto;
+  padding: 0 1.5rem;
+}
+
+:root {
+  /* Точные цвета из макета Figma (nav_crop.png): 
+     От пастельного сине-василькового слева, через чистый небесно-голубой по центру, к нейтральному серебристо-серому справа */
+  --color-header-from: #9cb2cf;
+  --color-header-via: #8fb4f8;
+  --color-header-to: #adb0b5;
+  --navbar-height: 44px;
+  --navbar-pad-inline-start: 32px;
+  --space-6: 24px;
+  --radius-header: 10px;
+}
+
+.navbar,
+.navbar__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 36px;
+  row-gap: 8px;
+  min-height: var(--navbar-height);
+  padding-block: 10px;
+  padding-inline: var(--navbar-pad-inline-start) var(--space-6);
+  border-radius: var(--radius-header);
+  background-image: linear-gradient(
+    90deg,
+    #9bb2d0 0%,
+    var(--color-header-from) 12.019%,
+    var(--color-header-via) 49.519%,
+    var(--color-header-to) 88.942%,
+    #aeabae 100%
+  );
+  box-sizing: border-box;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  outline: none;
+  letter-spacing: 0.2px;
+}
+
+.navLink:hover {
+  opacity: 0.85;
+  background: transparent;
+}
+
+.navLink.active {
+  background: transparent;
+  font-weight: 700;
+  opacity: 1;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .navLinks {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .navLink {
+    font-size: 0.95rem;
+  }
+}

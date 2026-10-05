@@ -1,0 +1,98 @@
+.partnersSection {
+  max-width: var(--max-width);
+  margin: 3.5rem auto 0 auto;
+  padding: 0 1.5rem;
+}
+
+.partnersSectionHeader {
+  margin-bottom: 2rem;
+}
+
+.partnersSectionTitle {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.partnersSectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.partnerCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: #cbd5e1;
+}
+
+.partnerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.partnerLogoWrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.partnerLogo {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.partnerLinkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.partnerCard:hover .partnerLinkIcon {
+  background: var(--accent-blue);
+  color: #ffffff;
+  transform: translate(2px, -2px);
+}
+
+.partnerDescription {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  text-align: justify;
+}
+
+@media (max-width: 800px) {
+  .partnersGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

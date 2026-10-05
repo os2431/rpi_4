@@ -1,0 +1,80 @@
+.aboutSection {
+  max-width: var(--max-width);
+  margin: 3.5rem auto 0 auto;
+  padding: 0 1.5rem;
+}
+
+.aboutContentBox {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.aboutTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+.aboutManifesto {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--text-main);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.aboutKeyMetrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricNumber {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-blue);
+}
+
+.metricLabel {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .aboutManifesto {
+    font-size: 1.15rem;
+  }
+
+  .aboutKeyMetrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutContentBox {
+    padding: 2rem 1.25rem;
+  }
+
+  .aboutKeyMetrics {
+    grid-template-columns: 1fr;
+  }
+}
